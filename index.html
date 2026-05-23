@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>共鸣者档案 | 游戏创造者议会</title>
+    <meta name="description" content="踏入造物主之墟，找到你的共鸣协会。">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="test">
+    <div class="ambient" aria-hidden="true">
+      <span class="moon"></span>
+      <span class="ruin-arch"></span>
+      <span class="rune-ring"></span>
+      <span class="star star-a"></span>
+      <span class="star star-b"></span>
+      <span class="star star-c"></span>
+      <span class="mist mist-a"></span>
+      <span class="mist mist-b"></span>
+    </div>
+
+    <main class="shell">
+      <section class="hero view is-active" id="intro-view" aria-labelledby="intro-title">
+        <p class="eyebrow">游戏创造者议会 · 共鸣之章</p>
+        <h1 class="hero-title" id="intro-title">
+          <span>你的灵魂</span>
+          <span>在废墟中</span>
+          <span class="hero-question-line">
+            <span class="hero-question-text">回响着什么</span>
+            <span class="hero-punctuation">？</span>
+          </span>
+        </h1>
+        <p class="lead">造物主踪落之后，四大协会<br>以各自的共鸣维系着世界的碎片。<br>踏入废墟深处，聆听最初的回音。</p>
+        <button class="primary-action" type="button" id="start-button">踏入废墟</button>
+        <p class="fineprint">7 个场景 · 约 2 分钟 · 揭示你的共鸣归属</p>
+      </section>
+
+      <section class="quiz view" id="quiz-view" aria-live="polite" aria-labelledby="question-title">
+        <header class="quiz-header">
+          <div>
+            <p class="eyebrow" id="question-kicker">共鸣试炼</p>
+            <h2 id="question-title"></h2>
+          </div>
+          <div class="progress-orb" aria-label="测试进度">
+            <span id="question-count">1/7</span>
+          </div>
+        </header>
+        <p class="lore" id="question-lore"></p>
+        <div class="progress-track" aria-hidden="true">
+          <span id="progress-bar"></span>
+        </div>
+        <div class="option-grid" id="option-grid"></div>
+      </section>
+
+      <section class="view" id="resonance-view" aria-live="polite">
+        <div class="resonance-veil">
+          <div class="sigil-wheel" aria-hidden="true">
+            <span>◇</span><span>✦</span><span>✧</span><span>◆</span>
+          </div>
+          <h2>灵魂回响正在聚合</h2>
+          <p>四座殿堂的微光短暂交叠，等待你的主脉显现。</p>
+        </div>
+      </section>
+
+      <section class="result view" id="result-view" aria-labelledby="result-title">
+        <div class="summon-stage">
+          <p class="eyebrow">共鸣者协会身份卡</p>
+          <button class="fantasy-card" id="identity-card" type="button" aria-label="点击翻开共鸣身份卡">
+            <span class="card-aura" aria-hidden="true"></span>
+            <span class="card-inner">
+              <span class="card-side card-back">
+                <span class="back-sigil">✦</span>
+                <span class="back-title">共鸣之章</span>
+                <span class="back-line">触碰卡牌，揭示协会归属</span>
+              </span>
+              <span class="card-side card-front">
+                <img id="result-card-image" src="" alt="">
+                <span class="front-crest" id="result-crest" aria-hidden="true">◇</span>
+                <span class="front-nameplate">
+                  <strong id="front-english-name"></strong>
+                  <em id="front-chinese-name"></em>
+                </span>
+              </span>
+            </span>
+          </button>
+          <p class="card-hint" id="card-hint">卡牌边缘的微光已经回应你。点击卡牌，翻开你的共鸣身份。</p>
+
+          <div class="result-copy" id="result-copy">
+            <h2 class="bilingual-title" id="result-title">
+              <span class="english-name" id="result-english-name"></span>
+              <span class="chinese-name" id="result-chinese-name"></span>
+            </h2>
+            <p class="subtitle" id="result-subtitle"></p>
+            <p class="declaration" id="result-declaration"></p>
+            <div class="keyword-row" id="keyword-row"></div>
+            <p class="portrait" id="result-portrait"></p>
+            <div class="distribution" id="distribution"></div>
+            <div class="action-row">
+              <button class="ghost-action" type="button" id="restart-button">重新试炼</button>
+              <button class="primary-action compact" type="button" id="share-button">分享共鸣身份</button>
+            </div>
+            <a class="community-link" id="community-link" href="world.html">前往光核，找到你的协会同伴</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
